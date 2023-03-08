@@ -39,10 +39,37 @@ h1{
     align-items: center;
 }
 
-#root{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+hr{
+    width: 80vw;
+    border-top: 5px solid rgb(188,160,255);
 }
 
+.logo{
+    margin: 1rem;
+    height: 5vh;
+}
+
+
+.features{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    height: 45vh;
+}
+.card{
+    width: 25%;
+    padding: 2%;
+    height: 100%;
+    border-radius: 20px;
+}
+.card img{
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+.explore-button{
+    border: 0;
+    border-radius: 20px;
+    padding: 5px;
+}

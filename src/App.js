@@ -6,6 +6,8 @@ import { Articles } from './pages/articles-main';
 import { Account } from './pages/account';
 import { Health } from './pages/health-tracking';
 import { Navbar } from './components/Navbar.js';
+import { Footer } from './components/Footer';
+import { Help } from './components/Help';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path='health-tracking' element={<Health/>} ></Route>
         <Route path='log-in' element={<Account/>} ></Route>
       </Routes>
+      <Help/>
+      <Footer/>
     </>
   );
 }

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Navbar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 export const Navbar = () => {
     return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
             <Link to='/' class="navbar-brand my-0 mr-md-auto font-weight-normal">
-                <img src="./assets/logo_transparent.png" width="30" height="30" alt="logo"/>
+                <img src={require("../assets/logo_transparent.png")} width="40" height="30" alt="logo"/>
                 Health Advice Group
             </Link>
 
@@ -34,7 +34,7 @@ export const Navbar = () => {
                     </li>
                     <li class="nav-item">
                         <Link to='log-in' class="nav-link">
-                            Sign-in
+                            Account
                         </Link>
                     </li>
                 </ul>
