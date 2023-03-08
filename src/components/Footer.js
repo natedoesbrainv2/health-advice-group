@@ -1,21 +1,22 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import './Footer.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Footer.css';
 
 
-export const Footer = () => {
+class Footer extends Component{
+    render(){
     return (
         <>
-        <div class="container-fluid my-5 bg-dark ">
-            <footer class="d-flex justify-content-between">
+        <div id="main-footer" class="my-5 bg-dark">
+            <footer class="d-flex justify-content-center">
                 
                 <section className='company'>
                     <div class="container justify-content-center text-center text-md-start mt-5 text-white">
                     <div class="row mt-3 justify-content-center">
-                        <div col-md-3 col-lg-4 col-xl-3 mx-auto mb-4>
+                        <div  class="col-md-3 col-lg-2 col-xl-3 mx-auto mb-4">
                             <img className="logo" src={require("../assets/logo_transparent.png")} width="60px" height="30px" alt="logo"/>
-                            <h6>Health <br/>Advice <br/>Group</h6>
+                            <Link to='/'><h6>Health <br/>Advice <br/>Group</h6></Link>
                         </div>
                         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                             <h6>Explore...</h6>
@@ -31,16 +32,16 @@ export const Footer = () => {
                             <a>Settings</a>
                         </div>
                         <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <h6><a>Want to send feedback? Click Here!</a></h6>
-                            <a>Email: help@hag.co.uk</a><br/>
-                            <a>Phone: 012345678901</a>
+                            <h6>Want to send feedback?</h6>
+                            <p>Email: help@hag.co.uk</p>
+                            <p>Phone: 012345678901</p>
                         </div>
                     </div>
                     </div>
                 </section>
             </footer>
 
-            <div className='copyright-text'>
+            <div id='copyright-text'>
                 2023 N.Stevenson, Health Advice Group. All Rights Reserved
             </div>    
         </div>
@@ -48,3 +49,6 @@ export const Footer = () => {
         </>
     )
 }
+}
+
+export default Footer;

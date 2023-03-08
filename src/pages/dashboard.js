@@ -1,10 +1,14 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 //The main code for the Home Page
-export const Dashboard = () => {
+class Dashboard extends Component{
+    render(){
     return (
-        <div>Dashboard</div>
+        <div>
+            Dashboard Coming Soon...
+        </div>
     )
 }
+}
+export default Dashboard;

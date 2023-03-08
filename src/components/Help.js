@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, {Component} from 'react';
 import "./Help.css"
 
-export const Help = () => {
+class Help extends Component{
+    render(){    
     return (
         <>
         <button onClick={helpdoc_popup} className="help-button" type="button">
@@ -14,8 +14,9 @@ export const Help = () => {
         </>
     )
 }
+}
 
-
+export default Help;
 
 
 
