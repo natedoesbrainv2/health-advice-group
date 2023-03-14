@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
+import privacyPolicy from '../other/privacy-policy';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Footer.css';
 
 
-class Footer extends Component{
-    render(){
+function Footer(){
     return (
         <>
         <div id="main-footer" class="bg-dark">
@@ -27,7 +27,7 @@ class Footer extends Component{
                         </div>
                         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                             <h6>Other...</h6>
-                            <a>Privacy Policy</a><br/>
+                            <a onClick={handleShow}>Privacy Policy</a><br/>
                             <a>Terms and Conditions</a><br/>
                             <a>Settings</a>
                         </div>
@@ -49,6 +49,6 @@ class Footer extends Component{
         </>
     )
 }
-}
+
 
 export default Footer;
