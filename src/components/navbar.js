@@ -1,49 +1,28 @@
-import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
 import './Navbar.css';
-import 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
-class Navbar extends Component{
-    render(){
+
+function Navigation(){
     return (
-        <nav className="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
-            <Link to='/' class="navbar-brand my-0 mr-md-auto font-weight-normal">
-                <img src={require("../assets/logo_transparent.png")} width="40" height="30" alt="logo"/>
-                Health Advice Group
-            </Link>
-
-            <button collapseOnSelect class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span collapseOnSelect class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <Link to='dashboard' class="nav-link">
-                            Dashboard
-                        </Link>
-                    </li>
-                    <li class="nav-item">
-                        <Link to='articles' class="nav-link">
-                            Articles
-                        </Link>
-                    </li>
-                    <li class="nav-item">
-                        <Link to='health-tracking' class="nav-link">
-                            Health Tracking
-                        </Link>
-                    </li>
-                    <li class="nav-item">
-                        <Link to='login' class="nav-link">
-                            Account
-                        </Link>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <Navbar expand='lg'>
+            <Container>
+                <Navbar.Brand href='/'>
+                    <img src={require("../assets/logo_transparent.png")} alt='logo' width='40' height='30'/>
+                    Health Advice Group
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls='basic-navbar-nav'/>
+                <Navbar.Collapse id='basic-navbar-nav'>
+                    <Nav.Link href='/'>Home</Nav.Link>
+                    <Nav.Link href='/dashboard'>Dashboard</Nav.Link>
+                    <Nav.Link href='/articles'>Articles</Nav.Link>
+                    <Nav.Link href='/health-tracking'>Health Tracking</Nav.Link>
+                    <Nav.Link href='/account'>Account</Nav.Link>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     )
 }
-}
 
-export default Navbar;
+export default Navigation;

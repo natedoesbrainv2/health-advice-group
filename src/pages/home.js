@@ -1,20 +1,18 @@
-import React, {Component} from 'react';
+import React from 'react';
 import '../index.css';
 import './home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
 
 //The main HTML code for the Home Page
-class Home extends Component{
-    render(){
+function Home(){
     return (
         <>
             <div className='homepage-banner'>
                 <div >
                 <h1>Forecasting for your area</h1>
-                <button className='banner-button'>
+                <button className='banner-button'><a href='/dashboard'>
                     Get my dashboard →
-                </button>
+                </a></button>
                 </div>
                 <div>
                     <img alt='dashboard-preview'></img>
@@ -57,6 +55,6 @@ class Home extends Component{
         </>
     )
 }
-}
+
 
 export default Home;
