@@ -15,7 +15,7 @@ class Signup extends Component{
                 <label for="password" > Password: </label><br/> 
                 <input type="text" name="password"/> <br/>  
                 <input type="submit" value="Submit"/><br/>
-                <text>Already have an account? <a href="./login">Log in</a></text>
+                <text>Already have an account? <a href="./log-in">Log in</a></text>
             </form>
         </div>
         </>

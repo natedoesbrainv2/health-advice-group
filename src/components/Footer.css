@@ -8,3 +8,10 @@
 #main-footer{
     width: 100%;
 }
+#company-name h6{
+    text-decoration: none;
+    color: azure;
+}
+#explore-links a{
+    color: white;
+}

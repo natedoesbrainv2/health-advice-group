@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Switch, Route, Link, Routes } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Home  from './pages/home';
 import Dashboard  from './pages/dashboard';
 import Articles  from './pages/articles-main';
@@ -19,8 +18,8 @@ function App() {
           <Route path='dashboard' element={<Dashboard/>} ></Route>
           <Route path='articles' element={<Articles/>} ></Route>
           <Route path='health-tracking' element={<Health/>} ></Route>
-          <Route path='login' element={<Login/>} ></Route>
-          <Route path='signup' element={<Signup/>}></Route>
+          <Route path='log-in' element={<Login/>} ></Route>
+          <Route path='sign-up' element={<Signup/>}></Route>
         </Routes>
         <Help/>
         <Footer/>

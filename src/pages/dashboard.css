@@ -1,8 +1,14 @@
 .dashboard{
     background-color: rgb(247, 245, 245);
     margin: 2rem;
+    margin-top: 1rem;
     padding: 2rem;
     border-radius:  20px;
+}
+
+h3{
+    display: flex;
+    text-align: center;
 }
 
 .search-bar input{

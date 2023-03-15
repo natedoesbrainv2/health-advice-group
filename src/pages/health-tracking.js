@@ -1,13 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-//The main code for the Home Page
-class Health extends Component{
-    render(){
+function Health(){
     return (
         <div>Coming Soon Health Tracking Tool...</div>
     )
-}
 }
 
 export default Health;

@@ -1,26 +1,32 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 import '../index.css';
 import './home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-//The main HTML code for the Home Page
 function Home(){
     return (
         <>
-            <div className='homepage-banner'>
-                <div >
-                <h1>Forecasting for your area</h1>
-                <button className='banner-button'><a href='/dashboard'>
-                    Get my dashboard →
-                </a></button>
-                </div>
-                <div>
-                    <img alt='dashboard-preview'></img>
-                </div>
+            <div id='homepage-banner'>
+                <Row xs={1} md={2}>
+                    <Col>
+                        <h1 id='homepage-heading'>Forecasting for your area</h1>
+                        <Button variant='light' size='s' href='/dashboard'>
+                            Get my dashboard →
+                        </Button>
+                    </Col>
+                    <Col>
+                        <img alt='dashboard-preview'></img>
+                    </Col>
+                </Row>
             </div>
 
-            <div className='main-description'>
-                <img className='logo' src={require("../assets/logo_transparent.png")} alt='logo'/>
+            <div id='main-description'>
+                <img id='logo' src={require("../assets/logo_transparent.png")} alt='logo'/>
                 <h2>
                     We are the Health Advice Group
                 </h2>
@@ -29,29 +35,44 @@ function Home(){
 
             <hr/>
 
-            <div className='features'>
-                <div className='card'>
-                    <img src={require("../assets/woman_sneezing.jpg")} alt="sneezing woman"/>
-                    <h3>Health tracking tool</h3>
-                    <p>Track your mood and symptoms to see how the environment affects you</p>
-                    <button className='explore-button'><a href='./health-tracking'>Explore →</a></button>
-                </div>
-
-                <div className='card'>
-                    <img src={require("../assets/purple_clouds.jpg")} alt="weather" />
-                    <h3>Weather Dashboard</h3>
-                    <p>Forecasting visuals for your area; Air Quality, Pollen Levels, Weather and Advice</p>
-                    <button className='explore-button'><a href='./dashboard'>Explore →</a></button>
-                </div>
-
-                <div className='card'>
-                    <img src={require("../assets/woman_drinking_water.jpg")} alt="woman drinking water"/>
-                    <h3>Articles & Assessments</h3>
-                    <p>Articles on how to cope with the climate also risk assessments for your home</p>
-                    <button className='explore-button'><a href='./articles'>Explore →</a></button>
-                </div>
-
-            </div>
+            <Row xs={1} md={3}>
+                <Col>
+                    <Card>
+                        <Card.Img variant='top' src={require("../assets/purple_clouds-min.jpg")} alt="purple clouds"/>
+                        <Card.Body>
+                            <Card.Title>Health tracking tool</Card.Title>
+                            <Card.Text>
+                                Track your mood and symptoms to see how the environment affects you
+                            </Card.Text>
+                            <Button variant='secondary' href='./articles'>Explore →</Button>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col>
+                    <Card>
+                        <Card.Img variant='top' src={require("../assets/woman_drinking_water-min.jpg")} alt="woman drinking water"/>
+                        <Card.Body>
+                            <Card.Title>Weather Dashboard</Card.Title>
+                            <Card.Text>
+                                Forecasting visuals for your area; Air Quality, Pollen Levels, Weather and Advice
+                            </Card.Text>
+                            <Button variant='secondary' href='./articles'>Explore →</Button>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col>
+                    <Card>
+                        <Card.Img variant='top' src={require("../assets/woman_sneezing-min.jpg")} alt="sneezing woman"/>
+                        <Card.Body>
+                            <Card.Title>Articles & Assessments</Card.Title>
+                            <Card.Text>
+                                Articles on how to cope with the climate also risk assessments for your home
+                            </Card.Text>
+                            <Button variant='secondary' href='./articles'>Explore →</Button>
+                        </Card.Body>
+                    </Card>                    
+                </Col>
+            </Row>
         </>
     )
 }

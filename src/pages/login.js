@@ -1,10 +1,7 @@
-import React, {Component} from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
 import './login.css';
-import { Link } from 'react-router-dom';
 
-class Login extends Component{
-    render(){
+function Login(){
     return (
         <>
         <div id='background-container'>
@@ -14,12 +11,11 @@ class Login extends Component{
                 <label for="password" > Password: </label><br/> 
                 <input type="text" name="password"/> <br/> 
                 <input type="submit" value="Submit"/><br/>
-                <text>Dont have an account? <a href="./signup">Sign Up</a></text>
+                <text>Dont have an account? <a href="./sign-up">Sign Up</a></text>
             </form>
         </div>
         </>
     )
-}
 }
 
 export default Login;

@@ -22,7 +22,7 @@ Freezing Temperatures   (Below -10)
 
 function getAdvice(temp){
         if(temp >= 35){
-            return <><h6>Extremely Hot Temperatures</h6><p>Dress in lightweight, light-coloured clothing. Keep windows and doors shut during the day. Stay hydrated and keep cool, avoid alcohol consumption. Stay in the shade and be cautious of heat related symptoms.</p></>;
+            return <><h6>Extremely Hot Temperatures</h6><p>Dress in lightweight, light-coloured clothing. Keep windows and doors shut during the day. Stay hydrated and keep cool, avoid alcohol consumption. Stay in the shade and be cautious of any heat related symptoms.</p></>;
         } else if (temp >= 25) {
             return <><h6>Hot Temperatures</h6><p>Wear lightweight clothing and stay hydrated. Keep yourself and your home cool, consider a cool shower or using fans. Use suncream if you are outside or find shade.</p></>;
         } else if (temp >= 17) {
@@ -30,7 +30,7 @@ function getAdvice(temp){
         } else if (temp >= 10) {
             return <><h6>Cool Temperatures</h6><p>Wear a jacket or lightweight outerwear when outside.</p></>;
         } else if (temp >= 0) {
-            return <><h6>Cold Temperatures</h6><p>Dress warm and war a coat when outside. Check road conditions before travelling. Avoid staying outside for prolonged periods of time.</p></>;
+            return <><h6>Cold Temperatures</h6><p>Dress warm and wear a coat when outside. Check road conditions before travelling. Avoid staying outside for prolonged periods of time.</p></>;
         } else if (temp >= -10) {
             return <><h6>Very Cold Temperatures</h6><p>Dress warm with gloves, hat and a coat when leaving buildings. Minimise travelling and check road conditions before travelling. Avoid staying outside for prolonged periods of time.</p></>;
         } else if (temp < -10) {
@@ -66,6 +66,7 @@ function Dashboard(){
 
     return (
         <>
+        {data.name == undefined && <h3>Enter your city in the search bar below for your forecast</h3>}
         <Container className='dashboard'>
             <Row>
                 <Col md={5}>
