@@ -41,7 +41,7 @@ function getAdvice(temp){
 }
 
 
-function Dashboard(){
+function DashboardPage(){
 
     const[data, setData] = useState({})
     const[location, setLocation] = useState('')
@@ -128,4 +128,4 @@ function Dashboard(){
     )
 }
 
-export default Dashboard;
+export default DashboardPage;

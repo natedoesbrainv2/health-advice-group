@@ -1,25 +1,26 @@
-import { BrowserRouter as Router, Switch, Route, Link, Routes } from 'react-router-dom';
-import Home  from './pages/home';
-import Dashboard  from './pages/dashboard';
-import Articles  from './pages/articles-main';
-import Health  from './pages/health-tracking';
+import { Route, Routes } from 'react-router-dom';
+import HomePage  from './pages/home';
+import DashboardPage  from './pages/dashboard';
+import ArticlesPage  from './pages/articles';
+import HealthPage  from './pages/health-tracking';
+import LoginPage  from './pages/login.js';
+import RegisterPage  from './pages/register.js';
 import Navigation from './components/Navbar.js';
 import Footer  from './components/Footer';
 import Help  from './components/Help';
-import Login  from './pages/login.js';
-import Signup  from './pages/signup.js';
+
 
 function App() {
   return (
     <>
         <Navigation/>
         <Routes>
-          <Route path='/' element={<Home/>} ></Route>
-          <Route path='dashboard' element={<Dashboard/>} ></Route>
-          <Route path='articles' element={<Articles/>} ></Route>
-          <Route path='health-tracking' element={<Health/>} ></Route>
-          <Route path='log-in' element={<Login/>} ></Route>
-          <Route path='sign-up' element={<Signup/>}></Route>
+          <Route path='/' element={<HomePage/>} ></Route>
+          <Route path='dashboard' element={<DashboardPage/>} ></Route>
+          <Route path='articles' element={<ArticlesPage/>} ></Route>
+          <Route path='health-tracking' element={<HealthPage/>} ></Route>
+          <Route path='log-in' element={<LoginPage/>} ></Route>
+          <Route path='register' element={<RegisterPage/>}></Route>
         </Routes>
         <Help/>
         <Footer/>

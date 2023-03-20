@@ -1,21 +1,31 @@
-import React from 'react';
-import './login.css';
+import React, { useState } from 'react';
 
-function Login(){
+function LoginPage(){
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+
     return (
         <>
         <div id='background-container'>
+            <h2>Login</h2>
             <form>
-                <label for="email" > Email Address:</label><br/> 
-                <input type="text" name="email"/> <br/> 
-                <label for="password" > Password: </label><br/> 
-                <input type="text" name="password"/> <br/> 
+                <input type="text" 
+                        name="username"
+                        placeholder='Username'
+                        value={username}
+                        /> <br/>
+
+                <input type="text" 
+                        name="password"
+                        placeholder='Password'
+                        value={password}
+                        /> <br/> 
                 <input type="submit" value="Submit"/><br/>
-                <text>Dont have an account? <a href="./sign-up">Sign Up</a></text>
+                <p>Dont have an account? <a href="./register">Sign Up</a></p>
             </form>
         </div>
         </>
     )
 }
 
-export default Login;
+export default LoginPage;

@@ -18,7 +18,7 @@ function Navigation(){
                     <Nav.Link href='/dashboard'>Dashboard</Nav.Link>
                     <Nav.Link href='/articles'>Articles</Nav.Link>
                     <Nav.Link href='/health-tracking'>Health Tracking</Nav.Link>
-                    <Nav.Link href='/sign-up'>Sign Up</Nav.Link>
+                    <Nav.Link href='/register'>Register</Nav.Link>
                     <Nav.Link href='/log-in'>Log In</Nav.Link>
                 </Navbar.Collapse>
             </Container>

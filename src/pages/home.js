@@ -8,7 +8,7 @@ import '../index.css';
 import './home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Home(){
+function HomePage(){
     return (
         <>
             <div id='homepage-banner'>
@@ -78,4 +78,4 @@ function Home(){
 }
 
 
-export default Home;
+export default HomePage;

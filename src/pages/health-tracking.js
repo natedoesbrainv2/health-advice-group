@@ -1,10 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Health(){
+function HealthPage(){
     return (
         <div>Coming Soon Health Tracking Tool...</div>
     )
 }
 
-export default Health;
+export default HealthPage;
