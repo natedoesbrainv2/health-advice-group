@@ -4,14 +4,19 @@ import './register.css';
 function RegisterPage(){
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-
+    
     async function Register(event){
         event.preventDefault()
-        await fetch('http://localhost:4000/register', {
+        const response = await fetch('http://localhost:4000/register', {
             method: 'POST',
             body: JSON.stringify({username, password}),
             headers: {'Content-Type':'application/json'},
         })
+        if(response.status === 200){
+            alert('Registration success')
+        } else {
+            alert('registration failed')
+        }
     }
 
     return (
