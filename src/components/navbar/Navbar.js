@@ -1,5 +1,5 @@
-import { useEffect, useState, useContext } from 'react';
-import { UserContext } from './UserContext';
+import { useEffect, useContext } from 'react';
+import { UserContext } from '../UserContext';
 import './Navbar.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -35,7 +35,7 @@ function Navigation(){
         <Navbar bg='light' expand='lg'>
             <Container>
                 <Navbar.Brand href='/'>
-                    <img src={require("../assets/logo_transparent.png")} alt='logo' width='40' height='30'/>
+                    <img id='navbar-logo-image' src={require("../../assets/logo_transparent.png")} alt='logo' width='50' height='auto'/>
                     Health Advice Group
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls='basic-navbar-nav'/>

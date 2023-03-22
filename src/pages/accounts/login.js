@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react';
 import {Navigate} from "react-router-dom";
-import { UserContext } from '../components/UserContext';
+import Button from 'react-bootstrap/Button';
+import { UserContext } from '../../components/UserContext';
+import './accounts.css';
 
 function LoginPage(){
     const [username, setUsername] = useState('')
@@ -31,23 +33,31 @@ function LoginPage(){
     }
     return (
         <>
-            <form onSubmit={Login}>
-                <h2 >Login</h2>
+            <form id="account-form" onSubmit={Login}>
+                <h2>Login</h2>
+                <div>
                 <input type="text" 
                         name="username"
+                        id="account-input"
                         placeholder='Username'
                         value={username}
                         onChange={event => setUsername(event.target.value)}
                         /> <br/>
-
                 <input type="text" 
                         name="password"
+                        id="account-input"
                         placeholder='Password'
                         value={password}
                         onChange={event => setPassword(event.target.value)}
                         /> <br/> 
-                <input type="submit" value="Submit"/><br/>
-                <p>Dont have an account? <a href="./register">Sign Up</a></p>
+                </div>
+                <p id="account-error">-</p>
+                <Button type="submit" 
+                        value="Submit"
+                        id="account-submit">
+                        Submit</Button><br/>
+                <hr/>
+                <p> Dont have an account? <a href="./register">Sign Up</a></p>
             </form>
         </>
     )

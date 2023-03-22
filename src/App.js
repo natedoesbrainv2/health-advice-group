@@ -1,15 +1,15 @@
 import { Route, Routes } from 'react-router-dom';
 import { UserContextProvider } from './components/UserContext';
-import HomePage  from './pages/home';
-import DashboardPage  from './pages/dashboard';
-import ArticlesPage  from './pages/articles';
-import HealthPage  from './pages/health-tracking';
-import LoginPage  from './pages/login.js';
-import RegisterPage  from './pages/register.js';
-import ArticlesCreate from './pages/article-create';
-import Navigation from './components/Navbar.js';
-import Footer  from './components/Footer';
-import Help  from './components/Help';
+import HomePage  from './pages/home/home';
+import DashboardPage  from './pages/dashboard/dashboard';
+import ArticlesPage  from './pages/articles/articles';
+import HealthPage  from './pages/health-tracking/health-tracking';
+import LoginPage  from './pages/accounts/login.js';
+import RegisterPage  from './pages/accounts/register.js';
+import ArticlesCreate from './pages/articles/article-create';
+import Navigation from './components/navbar/Navbar.js';
+import Footer  from './components/footer/Footer';
+import Help  from './components/helpdoc/Help';
 
 
 

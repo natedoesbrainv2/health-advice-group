@@ -17,7 +17,7 @@ function ArticlesCreate(){
         data.set('file', files[0] )
         event.preventDefault();
         console.log(files)
-        const response = await fetch('http://localhost:4000/post',{
+        const response = await fetch('http://localhost:4000/article',{
             method: 'POST',
             body: data,
         })

@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import PrivacyPolicy from '../other/privacy-policy';
-import TermsAndConditions from '../other/terms-and-conditions';
-import MedicalDisclaimer from '../other/medical-disclaimer';
+import React from 'react';
+import PrivacyPolicy from '../../other/privacy-policy';
+import TermsAndConditions from '../../other/terms-and-conditions';
+import MedicalDisclaimer from '../../other/medical-disclaimer.js';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Footer.css';
@@ -17,7 +17,7 @@ function Footer(){
                     <div class="container justify-content-center text-center text-md-start mt-5 text-white">
                     <div class="row mt-3 justify-content-center">
                         <div class="col-md-3 col-lg-2 col-xl-3 mx-auto mb-4" id='company-name'>
-                            <img id="logo" src={require("../assets/logo_transparent.png")} width="60px" height="30px" alt="logo"/>
+                            <img id="logo" src={require("../../assets/logo_transparent.png")} width="70px" height="auto" alt="logo"/>
                             <Link to='/'><h6>Health <br/>Advice <br/>Group</h6></Link>
                         </div>
                         <div id='explore-links' class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
