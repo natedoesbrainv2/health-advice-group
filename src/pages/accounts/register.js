@@ -1,5 +1,4 @@
 import Button from 'react-bootstrap/Button';
-import Validator from './validator'
 import React, { useState } from 'react';
 import './accounts.css';
 
@@ -9,23 +8,18 @@ function RegisterPage(){
     
     async function Register(event){
         event.preventDefault()
-        console.log(password)
-        const valid = Validator(password)
-        console.log(valid)
-        if (valid){
-            //sends the registration to the backend
-            const response = await fetch('http://localhost:4000/register', {
-                method: 'POST',
-                body: JSON.stringify({username, password}),
-                headers: {'Content-Type':'application/json'},
-            })
-            if(response.status === 200){
-                alert('Registration success')
-            } else {
-                alert('registration failed')
-            }
-        } 
-    }
+        //sends the registration to the backend
+        const response = await fetch('http://localhost:4000/register', {
+            method: 'POST',
+            body: JSON.stringify({username, password}),
+            headers: {'Content-Type':'application/json'},
+        })
+        if(response.status === 200){
+            alert('Registration success')
+        } else {
+            alert('registration failed')
+        }
+    } 
 
     return (
         <>
@@ -40,15 +34,15 @@ function RegisterPage(){
                             onChange={event => setUsername(event.target.value)}
                             /> <br/>
 
-                <input type="text" 
+                <input type="password" 
                         name="password"
                         id="account-input"
-                        
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                         placeholder='Password'
                         value={password}
                         onChange={event => setPassword(event.target.value)}
-                        /> <br/> 
-                        <p id="account-error">-</p>
+                        required/> <br/> 
             </div>
                 <Button type="submit" 
                         value="Submit"

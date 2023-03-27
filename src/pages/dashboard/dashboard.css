@@ -1,4 +1,4 @@
-.dashboard{
+#dashboard{
     background-color: rgb(247, 245, 245);
     margin: 2rem;
     margin-top: 1rem;
@@ -11,15 +11,15 @@ h3{
     text-align: center;
 }
 
-.search-bar input{
+#search-bar input{
     border-radius: 10px;
     padding: 4px;
     padding-left: 20px;
-    background-color: rgba(255, 255, 255, 0.795);
+    background-color: rgba(255, 255, 255, 0#795);
     width: 100%;
     margin-bottom: 1rem;
 }
-.location{
+#location{
     font-size: x-large;
     font-family: 'Josefin Sans', sans-serif;
     text-transform: uppercase;
@@ -27,23 +27,23 @@ h3{
     display: flex;
     flex-direction: row; 
 }
-.location i{
+#location i{
     margin-right: 1rem;
 }
 
-.temp{
+#temp{
     display: flex;
     justify-content: center;
 }
-.temp h2{
+#temp h2{
     font-size: 7rem;
 }
-.dashboard-bold{
+#dashboard-bold{
     font-size: 1rem;
     font-weight: bold;
     margin: 0;
 }
-.description{
+#description{
     font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -51,11 +51,11 @@ h3{
     justify-content: center;
     align-items: center;
 }
-.description p{
+#description p{
     margin: 0;
 }
 
-.advice{
+#advice{
     background-color: rgb(219, 219, 219);
     border: 1px solid darkgray;
     border-left: 3px solid rgb(73, 73, 73);

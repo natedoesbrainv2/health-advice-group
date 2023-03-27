@@ -43,22 +43,29 @@ function getAdvice(temp){
 
 function DashboardPage(){
 
+    var defaultData = require('./forecast.json')
     const[data, setData] = useState({})
     const[location, setLocation] = useState('')
     const[temp, setTemp] = useState('fish')
     const[icon, setIcon] = useState('')
     
-    const weatherURL =`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=14d0ba84180d28085a2422ce2d825d7b`;
+    const weatherURL =`http://api.weatherapi.com/v1/forecast.json?key=ee1a507182a24446b74205921232603&q=${location}&days=3&aqi=yes&alerts=no`;
+
+    //ee1a507182a24446b74205921232603
+    //https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=14d0ba84180d28085a2422ce2d825d7b
 
     //takes the users location and on 'Enter' creates an API call, the response is then set to 'data'
     const searchLocation = (event) => {
         if (event.key === 'Enter') {
+            console.log(defaultData)
+
             axios.get(weatherURL).then((response) => {
-                setData(response.data)
-                console.log(response.data)
-                setTemp(response.data.main.temp)
-                setIcon(response.data.weather[0].icon)
-                console.log(icon)
+                setData(Object.value(response.data))
+                console.log(data)
+                //setTemp(response.data.current.temp_c)
+                //setIcon(response.data.current.condition.icon)
+                console.log(temp)
+                console.log(data.location.name)
             })
             setLocation('')
         }
@@ -66,11 +73,11 @@ function DashboardPage(){
 
     return (
         <>
-        {data.name == undefined && <h3>Enter your city in the search bar below for your forecast</h3>}
-        <Container className='dashboard'>
+        <h3>Enter your city in the search bar below for your forecast</h3>
+        <Container id='dashboard'>
             <Row>
                 <Col md={5}>
-                    <div className='search-bar'>
+                    <div id='search-bar'>
                         <input
                         value= {location}
                         onChange= {event => setLocation(event.target.value)}
@@ -80,46 +87,88 @@ function DashboardPage(){
                     </div>
                 </Col>
                 <Col>
-                    <div className='location'>
-                        {data.name !== undefined && <i class="fa-solid fa-location-dot"/> }
-                        <p>{data.name}</p>
+                    <div id='location'>
+                        <p>{data.location}</p>
                     </div>
                 </Col>
             </Row>
             <Row>
                 <Col sm>
-                        <div className='temp'>
-                            {data.main ? <h2>{data.main.temp.toFixed()}°C</h2> : null}
+                        <div id='temp'>
                         </div>
-                        <div className='description'>
-                            {data.main ? <p>{data.weather[0].main}</p> : null}
-                            {data.name !== undefined && <img src={`http://openweathermap.org/img/w/${icon}.png`}/> }
+                        <div id='description'>
                         </div>
                     
                 </Col>
                 <Col sm>
-                    <div className='advice'>
+                    <div id='advice'>
                         {getAdvice(temp)}
                     </div>
                 </Col>
-                <Col sm>
-                    <div className='feels-like'>
-                        {data.name !== undefined &&
-                        <p className='dashboard-bold'>Feels Like:</p>
-                        }
-                        {data.main ? <p>{data.main.feels_like.toFixed()}°C</p> : null}
+                <Col sm> 
+                    <div id='feels-like'>
+                        <p id='dashboard-bold'>Feels Like:</p>
                     </div>
-                    <div className='humidity'>
-                        {data.name !== undefined &&
-                        <p className='dashboard-bold'>Humidity:</p>
-                        }
-                        {data.main ? <p>{data.main.humidity} %</p> : null}
+                    <div id='humidity'>
+                        <p id='dashboard-bold'>Humidity:</p>
                     </div>
-                    <div className='wind-speed'>
-                        {data.name !== undefined &&
-                        <p className='dashboard-bold'>Wind Speed:</p>
-                        }
-                        {data.main ? <p>{data.wind.speed.toFixed()} MPH</p> : null}
+                    <div id='wind-speed'>
+                        <p id='dashboard-bold'>Wind Speed:</p>
+                    </div>
+                </Col>
+            </Row>
+            <Row sm={1} md={2}>
+                <Col>
+                    <div id='air-quality'>
+                        <h2>Current Air Quality</h2>
+                        <div id='aq-overall'>
+                            <p>Moderate</p>
+                        </div>
+                        <div id='defra'>
+                            2
+                        </div>
+                        <div id='epa'>
+                            2
+                        </div>
+
+                    </div>
+                </Col>
+                <Col>
+                    <div id='forecast'>
+                        <h2>3-Day Forecast</h2>
+                        <Row>
+                            <div id='day-1'>
+                                <p>22/3/33</p>
+                                <div id='fc-temp'>
+                                    <p>3</p>
+                                </div>
+                                <div id='fc-weather'>
+                                    <p>cloudy</p>
+                                </div>
+                            </div>
+                        </Row>
+                        <Row>
+                        <div id='day-2'>
+                            <p>22/3/33</p>
+                                <div id='fc-temp'>
+                                    <p>3</p>
+                                </div>
+                                <div id='fc-weather'>
+                                    <p>cloudy</p>
+                                </div>
+                            </div>
+                        </Row>
+                        <Row>
+                        <div id='day-3'>
+                            <p>22/3/33</p>
+                                <div id='fc-temp'>
+                                    <p>3</p>
+                                </div>
+                                <div id='fc-weather'>
+                                    <p>cloudy</p>
+                                </div>
+                            </div>
+                        </Row>
                     </div>
                 </Col>
             </Row>

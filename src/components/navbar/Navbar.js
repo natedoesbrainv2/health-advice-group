@@ -11,7 +11,7 @@ function Navigation(){
 
     const{setUserInfo, userInfo} = useContext(UserContext)
 
-    useEffect(() => {
+    /*useEffect(() => {
         fetch('http://localhost:4000/profile', {
             credentials: 'include',
         }).then(response => {
@@ -19,7 +19,7 @@ function Navigation(){
                 setUserInfo(userInfo)
             })
         })
-    }, []);
+    }, []);*/
 
     function Logout(){
         fetch ('http://localhost:4000/logout', {
