@@ -1,0 +1,30 @@
+#articles{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+#articles-title{
+    margin-top: 2rem;
+}
+#risks-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+#risks-container-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#risks-container-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#risks-button{
+    width: 50%;
+}

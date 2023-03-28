@@ -10,6 +10,7 @@ import ArticlesCreate from './pages/articles/article-create';
 import Navigation from './components/navbar/Navbar.js';
 import Footer  from './components/footer/Footer';
 import Help  from './components/helpdoc/Help';
+import RisksPage from './pages/risks/risk';
 
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='/' element={<HomePage/>} ></Route>
           <Route path='dashboard' element={<DashboardPage/>} ></Route>
           <Route path='articles' element={<ArticlesPage/>} ></Route>
+          <Route path='risks-assessment' element={<RisksPage/>}></Route>
           <Route path='health-tracking' element={<HealthPage/>} ></Route>
           <Route path='log-in' element={<LoginPage/>} ></Route>
           <Route path='register' element={<RegisterPage/>}></Route>

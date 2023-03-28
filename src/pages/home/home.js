@@ -1,4 +1,3 @@
-import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -10,14 +9,14 @@ function HomePage(){
     return (
         <>
             <div id='homepage-banner'>
-                <Row s={1} md={2} id="banner-row">
-                    <Col md={6} id="homepage-banner-info">
+                <Row xs={1} s={1} md={2} id="banner-row">
+                    <Col id="homepage-banner-left">
                         <h1 id='homepage-heading'>Forecasting for your area</h1>
-                        <Button variant='light' size='s' href='/dashboard'>
+                        <Button variant='light' id='homepage-banner-button' href='/dashboard'>
                             Get my dashboard →
                         </Button>
                     </Col>
-                    <Col md={4}>
+                    <Col id="homepage-banner-right">
                         <img id='homepage-image' src={require("../../assets/dashboard-preview.png")} alt='dashboard-preview'></img>
                     </Col>
                 </Row>

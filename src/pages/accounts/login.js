@@ -51,7 +51,6 @@ function LoginPage(){
                         onChange={event => setPassword(event.target.value)}
                         /> <br/> 
                 </div>
-                <p id="account-error">-</p>
                 <Button type="submit" 
                         value="Submit"
                         id="account-submit">

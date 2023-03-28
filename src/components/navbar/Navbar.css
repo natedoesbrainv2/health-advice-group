@@ -1,6 +1,9 @@
 .navbar{
     width: 100%;
 }
+.nav-link{
+    color: rgb(78, 78, 78);
+}
 #navbar-logo-image{
     margin-right: 1rem;
 }
