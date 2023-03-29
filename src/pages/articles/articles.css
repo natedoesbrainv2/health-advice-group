@@ -3,14 +3,32 @@
     justify-content: center;
     gap: 1rem;
 }
+#articles-top{
+    max-width: 700px;
+    width: 80%;
+    text-align: center;
+}
 #articles-title{
     margin-top: 2rem;
+}
+#article-post{
+    width: 80%;
+    max-width: 300px;
+}
+#article-post a{
+    text-decoration: none;
+}
+#article-texts{
+    color: rgb(44, 44, 44);
+    text-decoration: none;
 }
 #risks-container{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
+    max-width: 700px;
+    width: 80%;
 }
 #risks-container-left{
     display: flex;
@@ -27,4 +45,25 @@
 }
 #risks-button{
     width: 50%;
+}
+
+#article-container{
+    max-width: 800px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    font-family: 'Josefin', sans-serif;
+    color: rgb(31, 31, 31);
+}
+
+#risk-assessment-form input{
+    margin: 1rem;
+}
+
+#creating-an-article{
+    margin: 10vh;
+}
+#article-creator-input{
+    height: 50vh;
 }

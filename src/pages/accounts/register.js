@@ -17,7 +17,7 @@ function RegisterPage(){
         if(response.status === 200){
             alert('Registration success')
         } else {
-            alert('registration failed')
+            alert('Username already taken')
         }
     } 
 
